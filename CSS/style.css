@@ -45,7 +45,7 @@ ul {
   display: none !important;
 }
 
-.main-container {
+.main-content {
   padding-left: 270px;
 }
 
@@ -691,23 +691,28 @@ h3.my-profession span {
   color: var(--text-black-700);
   font-weight: 400;
 }
+
 .contact .contact-form {
   flex: 0 0 100%;
   max-width: 100%;
 }
+
 .contact .contact-form .col-6 {
   flex: 0 0 50%;
   max-width: 50%;
 
 }
+
 .contact .contact-form .col-12 {
   flex: 0 0 100%;
   max-width: 100%;
-  
+
 }
+
 .contact .contact-form .form-item {
   margin-bottom: 30px;
 }
+
 .contact .contact-form .form-item .form-control {
   width: 100%;
   height: 50%;
@@ -719,6 +724,7 @@ h3.my-profession span {
   color: var(--text-black-700);
   transition: all 0.3s ease;
 }
+
 .contact .contact-form .form-item .form-control:focus {
   box-shadow: 0 0 20px rgb(48, 46, 77, 0.15);
 }
@@ -727,8 +733,53 @@ h3.my-profession span {
   height: 140px;
   resize: none;
 }
+
 .contact .contact-form .btn {
   height: 50px;
   padding: 0 50px;
 }
+
 /* contact End */
+
+@media (max-width:1199px) {
+  .aside {
+    left: -270px;
+  }
+
+  .main-content {
+    padding-left: 0;
+  }
+
+  .about .about-content .personal-info .info-item p span {
+    display: block;
+    margin-left: 0;
+  }
+
+
+}
+
+@media (max-width:991px) {
+
+  .contact .contact-info-item,
+  .portfolio .portfolio-item,
+  .service .service-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .home .home-info {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .home .home-img {
+    display: none;
+  }
+}
+
+@media (max-width:767px) {
+  .about .about-content . .about .about-content .personal-info {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
