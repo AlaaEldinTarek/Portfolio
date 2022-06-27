@@ -9,6 +9,14 @@
   <link rel="stylesheet" href="CSS/style.css">
   <link rel="stylesheet" href="CSS/skins/color-1.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <!-- ### style-switcher ###-->
+  <link rel="stylesheet" href="CSS/skins/color-1.css" class="alternate-style" title="color-1" disabled>
+  <link rel="stylesheet" href="CSS/skins/color-2.css" class="alternate-style" title="color-2" disabled>
+  <link rel="stylesheet" href="CSS/skins/color-3.css" class="alternate-style" title="color-3" disabled>
+  <link rel="stylesheet" href="CSS/skins/color-4.css" class="alternate-style" title="color-4" disabled>
+  <link rel="stylesheet" href="CSS/skins/color-5.css" class="alternate-style" title="color-5" disabled>
+  <link rel="stylesheet" href="CSS/style-switcher.css">
+
 </head>
 
 <body>
@@ -23,23 +31,23 @@
         <span></span>
       </div>
       <ul class="nav">
-        <li><a href="#" class="active"><i class="fa fa-home"></i>Home</a></li>
-        <li><a href="#"><i class="fa fa-user"></i>About</a></li>
-        <li><a href="#"><i class="fa fa-list"></i>Services</a></li>
-        <li><a href="#"><i class="fa fa-briefcase"></i>Portfolio</a></li>
-        <li><a href="#"><i class="fa fa-comment"></i>Contact</a></li>
+        <li><a href="#home" class="active"><i class="fa fa-home"></i>Home</a></li>
+        <li><a href="#about"><i class="fa fa-user"></i>About</a></li>
+        <li><a href="#services"><i class="fa fa-list"></i>Services</a></li>
+        <li><a href="#portfolio"><i class="fa fa-briefcase"></i>Portfolio</a></li>
+        <li><a href="#contact"><i class="fa fa-comment"></i>Contact</a></li>
       </ul>
     </div>
     <!-- ### Aside End ###-->
     <!-- ### Main Content Start ###-->
     <div class="main-content">
       <!-- ### Home Section Start ###-->
-      <section class="home section ">
+      <section class="home section " id="home">
         <div class="container">
           <div class="row">
             <div class="home-info padd-15">
               <h3 class="hello">Hello, My name is <span class"name">Alaa Eldin</span></h3>
-              <h3 class="my-profession">T' m a <span class"typing">Web Devolper</span></h3>
+              <h3 class="my-profession">T' m a <span id="typing"></span></h3>
               <p>front end developer with experience building responsive web design in the financial industry.
                 Proficient with CSS and JS Frameworks, with extensive knowledge of UX and user psychology, and many more
                 ...</p>
@@ -53,7 +61,7 @@
       </section>
       <!-- ### Home Section End ###-->
       <!-- ### About Start ###-->
-      <section class="about section ">
+      <section class="about section " id="about">
         <div class="container">
           <div class="row">
             <div class="section-title padd-15">
@@ -64,7 +72,7 @@
             <div class="about-content padd-15">
               <div class="row">
                 <div class="about-text padd-15">
-                  <h3>I'm Alaa Eldin <span>Wep Devolper</span></h3>
+                  <h3>I'm Alaa Eldin <span >(Front-end) Web Developer</span></h3>
                   <p>front end developer with experience building responsive web design in the financial industry.
                     Proficient with CSS and JS Frameworks, with extensive knowledge of UX and user psychology, and many
                     more
@@ -217,7 +225,7 @@
       </section>
       <!-- ### About End ###-->
       <!-- ### Services Section Start ###-->
-      <section class="service section ">
+      <section class="service section " id="services">
         <div class="container">
           <div class="row">
             <div class="section-title padd-15">
@@ -302,7 +310,7 @@
       </section>
       <!-- ### Services Section End ###-->
       <!-- ### Portfolio Section Start ###-->
-      <section class="portfolio section ">
+      <section class="portfolio section " id="portfolio">
         <div class="container">
           <div class="row">
             <div class="section-title padd-15">
@@ -317,37 +325,44 @@
           <div class="row">
             <!-- Portfolio Item Start -->
             <div class="portfolio-item padd-15">
-              <div class="portfolio-item-inner shadow-dark">
+              <div class="portfolio-item-inner ">
                 <div class="portfolio-img">
                   <img src="Imgs/p1.jpg" alt="">
                 </div>
               </div>
             </div>
             <div class="portfolio-item padd-15">
-              <div class="portfolio-item-inner shadow-dark">
+              <div class="portfolio-item-inner ">
                 <div class="portfolio-img">
                   <img src="Imgs/p2.png" alt="">
                 </div>
               </div>
             </div>
             <div class="portfolio-item padd-15">
-              <div class="portfolio-item-inner shadow-dark">
+              <div class="portfolio-item-inner ">
                 <div class="portfolio-img">
                   <img src="Imgs/p3.png" alt="">
                 </div>
               </div>
             </div>
             <div class="portfolio-item padd-15">
-              <div class="portfolio-item-inner shadow-dark">
+              <div class="portfolio-item-inner ">
                 <div class="portfolio-img">
                   <img src="Imgs/p4.jpg" alt="">
                 </div>
               </div>
             </div>
             <div class="portfolio-item padd-15">
-              <div class="portfolio-item-inner shadow-dark">
+              <div class="portfolio-item-inner ">
                 <div class="portfolio-img">
-                  <img src="Imgs/p5.webp" alt="">
+                  <img src="Imgs/p5.jpg" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-item padd-15">
+              <div class="portfolio-item-inner ">
+                <div class="portfolio-img">
+                  <img src="Imgs/p6.jpg" alt="">
                 </div>
               </div>
             </div>
@@ -358,7 +373,7 @@
       </section>
       <!-- ### Portfolio Section End ###-->
       <!-- ### Contact Section Start ###-->
-      <section class="contact section">
+      <section class="contact section" id="contact">
         <div class="container">
           <div class="row">
             <div class="section-title padd-15">
@@ -427,14 +442,33 @@
         </div>
       </section>
       <!-- ### Contact Section End ###-->
-
     </div>
     <!-- ### Main Content End ###-->
   </div>
   <!-- ### Main Container End ### -->
-
+  <!-- ### Style Switcher Start ### -->
+  <div class="style-switcher">
+    <div class="style-switcher-toggler s-icon">
+      <i class="fas fa-cog fa-spin"></i>
+    </div>
+    <div class="day-night  s-icon">
+      <i class="fas "></i>
+    </div>
+    <h4>Theme Colors</h4>
+    <div class="colors">
+      <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+      <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+      <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+      <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+      <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+    </div>
+  </div>
+  <!-- ### Style Switcher End ### -->
   <!-- JS File -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
+    referrerpolicy="no-referrer"></script>
   <script src="JS/script.js"></script>
+  <script src="JS/style-switcher.js"></script>
 </body>
 
 </html>

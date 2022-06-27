@@ -9,6 +9,14 @@
 
 }
 
+body.dark {
+  --bg-black-900: #151515;
+  --bg-black-100: #222222;
+  --bg-black-50: #393939;
+  --text-black-900: #ffffff;
+  --text-black-700: #e9e9e9;
+}
+
 body {
   line-height: 1.5;
   font-size: 16px;
@@ -281,7 +289,7 @@ h3.hello {
 
 h3.hello span {
   font-family: 'Clicker Script', cursive;
-  font-size: 30px;
+  font-size: 50px;
   font-weight: 700;
   color: var(--skin-color);
 }
@@ -299,13 +307,14 @@ h3.my-profession span {
   margin-bottom: 70px;
   font-size: 20px;
   color: var(--text-black-700);
+  padding-right: 30px;
 }
 
 .home .home-img {
   flex: 0 0 40%;
   max-width: 40%;
-  text-align: center;
   position: relative;
+  text-align: center;
 }
 
 .home-img::after {
@@ -315,8 +324,8 @@ h3.my-profession span {
   height: 80px;
   border-bottom: 10px solid var(--skin-color);
   border-right: 10px solid var(--skin-color);
-  right: 20px;
-  bottom: -45px;
+  right: 30px;
+  bottom: -30px;
 }
 
 .home-img::before {
@@ -326,17 +335,15 @@ h3.my-profession span {
   height: 80px;
   border-top: 10px solid var(--skin-color);
   border-left: 10px solid var(--skin-color);
-  left: 20px;
-  top: -40px;
+  left: 30px;
+  top: -30px;
 }
 
 .home .home-img img {
-  width: 400px;
+  width: 75%;
   border-radius: 0px 50px;
-  box-shadow: 5px 5px 13px 3px var(--skin-color);
-  text-align: center;
-  position: relative;
-
+  box-shadow: 0px 0px 20px 0px var(--skin-color);
+  
 }
 
 /* Home End */
@@ -562,7 +569,7 @@ h3.my-profession span {
 }
 
 .service .service-item .service-item-inner:hover {
-  box-shadow: 0 0 20px rgb(48, 46, 77, 0.15);
+  box-shadow: 0 0 20px var(--skin-color);
 }
 
 .service .service-item .service-item-inner .icon {
@@ -640,9 +647,12 @@ h3.my-profession span {
 
 .portfolio .portfolio-item-inner .portfolio-img img {
 
-  width: 200px;
-  height: 100px;
+  width: 100%;
   display: block;
+}
+
+.portfolio .portfolio-item-inner:hover {
+  box-shadow: 0 0 20px var(--skin-color);
 }
 
 /* Portfolio End */
@@ -726,11 +736,11 @@ h3.my-profession span {
 }
 
 .contact .contact-form .form-item .form-control:focus {
-  box-shadow: 0 0 20px rgb(48, 46, 77, 0.15);
+  box-shadow: 0px 0px 20px 0px var(--skin-color);
 }
 
 .contact .contact-form .form-item textarea.form-control {
-  height: 140px;
+  height: 300px;
   resize: none;
 }
 
@@ -778,7 +788,15 @@ h3.my-profession span {
 }
 
 @media (max-width:767px) {
-  .about .about-content . .about .about-content .personal-info {
+
+  .contact .contact-form .col-6,
+  .contact .contact-info-item,
+  .portfolio .portfolio-item,
+  .service .service-item,
+  .about .about-content .experience,
+  .about .about-content .education,
+  .about .about-content .skill,
+  .about .about-content .personal-info {
     flex: 0 0 100%;
     max-width: 100%;
   }
