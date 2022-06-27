@@ -20,7 +20,7 @@ body.dark {
 body {
   line-height: 1.5;
   font-size: 16px;
-  font-family: 'Poppins' sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 * {
@@ -343,7 +343,7 @@ h3.my-profession span {
   width: 75%;
   border-radius: 0px 50px;
   box-shadow: 0px 0px 20px 0px var(--skin-color);
-  
+
 }
 
 /* Home End */
@@ -799,5 +799,25 @@ h3.my-profession span {
   .about .about-content .personal-info {
     flex: 0 0 100%;
     max-width: 100%;
+  }
+
+  .about .about-content .personal-info div {
+    flex: 100%;
+    text-align: center;
+  }
+
+  .about .about-content .personal-info .info-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .about .about-content .personal-info .info-item p {
+    font-size: large;
+  }
+
+  .about .about-content .personal-info .info-item p span {
+    display: contents;
+    font-size: large;
   }
 }
