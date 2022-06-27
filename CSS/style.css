@@ -46,15 +46,24 @@ ul {
   display: block;
   padding: 0 30px;
   opacity: 1;
+  position: fixed;
+  left: 270px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
 
+}
+
+.section.active {
+  z-index: 2;
+  opacity: 1;
 }
 
 .hidden {
   display: none !important;
-}
-
-.main-content {
-  padding-left: 270px;
 }
 
 .padd-15 {
