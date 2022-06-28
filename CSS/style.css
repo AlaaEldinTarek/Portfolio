@@ -54,12 +54,29 @@ ul {
   z-index: 0;
   overflow-x: hidden;
   overflow-y: auto;
+  transition: all 0.3s ease;
 
+}
+
+.section.back-section {
+  z-index: 1;
 }
 
 .section.active {
   z-index: 2;
   opacity: 1;
+  animation: slideSection 1s ease;
+}
+
+@keyframes slideSection {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+
 }
 
 .hidden {
@@ -162,6 +179,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s ease;
 }
 
 .aside .logo {
@@ -220,6 +238,7 @@ ul {
   display: none;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s ease;
 }
 
 .aside .nav-toggle span {
@@ -228,6 +247,15 @@ ul {
   background: var(--skin-color);
   display: inline-block;
   position: relative;
+}
+
+.aside .nav-toggle.open span {
+  background-color: transparent;
+}
+
+.aside .nav-toggle.open span::before {
+  transform: rotate(45deg);
+  top: 0;
 }
 
 .aside .nav-toggle span::before {
@@ -248,6 +276,11 @@ ul {
   position: absolute;
   bottom: -6px;
   left: 0;
+}
+
+.aside .nav-toggle.open span::after {
+  transform: rotate(-45deg);
+  top: 0;
 }
 
 .aside .nav {
@@ -417,7 +450,7 @@ h3.my-profession span {
 }
 
 .about .about-content .personal-info .buttons .btn {
-  margin-right: 15px;
+
   margin-top: 10px;
 
 }
@@ -761,12 +794,33 @@ h3.my-profession span {
 /* contact End */
 
 @media (max-width:1199px) {
+  .section .container {
+    padding-top: 70px;
+  }
+
   .aside {
     left: -270px;
   }
 
-  .main-content {
-    padding-left: 0;
+  .aside.open {
+    left: 0;
+  }
+
+  .aside .nav-toggle {
+    display: flex;
+    left: 30px;
+  }
+
+  .aside .nav-toggle.open {
+    left: 300px;
+  }
+
+  .section {
+    left: 0;
+  }
+
+  .section.open {
+    left: 270px;
   }
 
   .about .about-content .personal-info .info-item p span {
