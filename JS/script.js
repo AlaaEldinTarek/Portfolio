@@ -14,6 +14,17 @@
 // }
 // _________________________________________________________________
 
+// add hover to nav 
+function activelink() {
+  navList.forEach((item) => {
+    item.classList.remove('hovered');
+  })
+  this.classList.add('hovered');
+  
+}
+
+// _________________________________________________________________
+
 // Add back-section fomr all section
 
 function addBackSction(num)
@@ -131,5 +142,8 @@ for (let i = 0; i < totalNavList; i++)
     }
   })
 }
+navList.forEach((item) => {
+  item.addEventListener('mouseover',activelink)
+})
 // _________________________________________________________________
 

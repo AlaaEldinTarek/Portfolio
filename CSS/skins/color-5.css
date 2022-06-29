@@ -1,3 +1,8 @@
 :root {
-  --skin-color : #f021b2 ;
+  --skin-color: #f021b2;
+}
+
+.home .home-img img {
+
+  background: url('/Imgs/55555.png');
 }
