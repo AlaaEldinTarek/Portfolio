@@ -47,7 +47,7 @@ ul {
   padding: 0 30px;
   opacity: 1;
   position: fixed;
-  left: 250px;
+  left: 100px;
   top: 0;
   right: 0;
   bottom: 0;
@@ -57,7 +57,9 @@ ul {
   transition: all 0.3s ease;
 
 }
-
+.section .aside:hover {
+  left: 270px;
+}
 .section.back-section {
   z-index: 1;
 }
@@ -167,13 +169,11 @@ ul {
 /* Aside Start */
 
 .aside {
-  width: 250px;
+  width: 100px;
   background: var(--bg-black-100);
   position: fixed;
   left: 0;
   top: 0;
-  /* border-right: 1px solid var(--bg-black-50); */
-  /* padding: 30px; */
   z-index: 10;
   height: 100%;
   display: flex;
@@ -182,11 +182,30 @@ ul {
   transition: all 0.3s ease;
 }
 
-.aside .logo {
+.aside:hover {
+  width: 250px;
+  background: var(--bg-black-100);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.aside:hover .logo {
   position: absolute;
   top: 50px;
   font-size: 30px;
   text-transform: capitalize;
+  display: block;
+  transition: 0.3s;
+}
+.aside .logo  {
+  display: none;
 }
 
 .aside .logo a {
@@ -286,16 +305,26 @@ ul {
 .aside .nav {
   margin-bottom: 50px;
   width: 100%;
-  margin-left: 10px;
+  margin-left: 5px;
 }
-
-.aside .nav li {
+.aside:hover .nav li {
   margin-bottom: 20px;
   display: block;
+}
+.aside .nav li {
+  
 
 }
+.aside .nav li a {
+  font-size: 20px;
+  font-weight: 600;
+  display: block;
+  /* border-bottom: 1px solid var(--bg-black-50); */
+  color: var(--text-black-900);
+  padding: 5px 15px;
+}
 
-.aside .nav li:hover ,
+.aside .nav li:hover,
 .aside .nav li.hovered {
   height: 75px;
   background: var(--bg-black-900);
@@ -305,16 +334,16 @@ ul {
   justify-content: center;
   align-items: center;
   padding-right: 20px;
-  margin-left: 20px;
+  margin-left: 5px;
   position: relative;
   font-size: 20px;
-  
+
 }
 
 
 .aside .nav li:hover a::before,
 .aside .nav li.hovered a::before {
-  
+
   content: '';
   position: absolute;
   background: transparent;
@@ -325,8 +354,9 @@ ul {
   border: 25px;
   border-radius: 50%;
   box-shadow: 30px 30px 0px 1px var(--bg-black-900);
-  
+
 }
+
 .aside .nav li:hover a::after,
 .aside .nav li.hovered a::after {
   content: '';
@@ -339,26 +369,45 @@ ul {
   border: 25px;
   border-radius: 50%;
   box-shadow: 30px -30px 0px 1px var(--bg-black-900);
-  
+
 }
 
-.aside .nav li a {
+.aside:hover .nav li a {
   font-size: 20px;
   font-weight: 600;
   display: block;
   /* border-bottom: 1px solid var(--bg-black-50); */
   color: var(--text-black-900);
   padding: 5px 15px;
+  margin-top: 0px;
+  margin-right: 0px;
 
 }
 
+.aside .nav li a {
+  color: var(--bg-black-100);
+  text-align: center;
+  display: block;
+  font-size: 0;
+  margin-top: 15px;
+  
+}
 .aside .nav li a.active {
   color: var(--skin-color);
+  
 }
 
 .aside .nav li a i {
+  color: var(--skin-color);
+  text-align: left;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.aside:hover .nav li a i {
   margin-right: 15px;
   color: var(--skin-color);
+  font-size: px;
+  margin-bottom: 0px;
 }
 
 /* Aside End */
