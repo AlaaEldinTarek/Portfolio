@@ -15,29 +15,26 @@
 // _________________________________________________________________
 
 // add hover to nav 
+let selNacSec = document.querySelectorAll('.nav li');
 function activelink() {
-  navList.forEach((item) => {
+  selNacSec.forEach((item) => {
     item.classList.remove('hovered');
   })
   this.classList.add('hovered');
-  
 }
 
 // _________________________________________________________________
 
 // Add back-section fomr all section
 
-function addBackSction(num)
-{
+function addBackSction(num) {
   allSection[num].classList.add("back-section");
 }
 // ________________________________________________________________
 // remove back-section fomr all section
 
-function removeBackSection()
-{
-  for (let n = 0; n < totalSection; n++) 
-  {
+function removeBackSection() {
+  for (let n = 0; n < totalSection; n++) {
     allSection[n].classList.remove("back-section");
   }
 }
@@ -45,8 +42,7 @@ function removeBackSection()
 
 // Add Active to list nav by click on nav list
 function showSection(e) {
-  for (let i = 0; i < totalSection; i++) 
-  {
+  for (let i = 0; i < totalSection; i++) {
     allSection[i].classList.remove("active");
   }
   let target = e.getAttribute("href").split("#")[1];
@@ -56,20 +52,16 @@ function showSection(e) {
 
 // Add Active to list nav by click on button
 
-function updateNav(element) 
-{
-  for(let i = 0; i < totalNavList; i++)
-  {
+function updateNav(element) {
+  for (let i = 0; i < totalNavList; i++) {
     navList[i].querySelector("a").classList.remove("active");
     let target = element.getAttribute("href").split("#")[1];
-    if(target === navList[i].querySelector("a").getAttribute("href").split("#")[1])
-  {
-    navList[i].querySelector("a").classList.add("active");
-  }
+    if (target === navList[i].querySelector("a").getAttribute("href").split("#")[1]) {
+      navList[i].querySelector("a").classList.add("active");
+    }
   }
 }
-document.querySelector(".hire-me").addEventListener("click", function()
-{
+document.querySelector(".hire-me").addEventListener("click", function () {
   let sectionIndex = this.getAttribute("data-section-index");
   showSection(this);
   updateNav(this);
@@ -81,17 +73,14 @@ document.querySelector(".hire-me").addEventListener("click", function()
 // add toggle on nav to open small media 
 
 let navTogglerBTN = document.querySelector(".nav-toggle"),
-aside = document.querySelector(".aside");
-navTogglerBTN.addEventListener("click" , () =>
-{
+  aside = document.querySelector(".aside");
+navTogglerBTN.addEventListener("click", () => {
   asideSectionTogglerBtn();
 })
-function asideSectionTogglerBtn()
-{
+function asideSectionTogglerBtn() {
   aside.classList.toggle("open");
   navTogglerBTN.classList.toggle("open");
-  for (let i = 0; i < totalSection; i++)
-  {
+  for (let i = 0; i < totalSection; i++) {
     allSection[i].classList.toggle("open");
   }
 }
@@ -114,36 +103,37 @@ let nav = document.querySelector(".nav"),
   allSection = document.querySelectorAll(".section"),
   totalSection = allSection.length;
 
-for (let i = 0; i < totalNavList; i++) 
-{
+for (let i = 0; i < totalNavList; i++) {
   let a = navList[i].querySelector("a");
-  a.addEventListener("click", function () 
-  {
-  //   for (let n = 0; n < totalSection; n++) 
-  // {
-  //   allSection[n].classList.remove("back-section");
-  // }
+  a.addEventListener("click", function () {
+    //   for (let n = 0; n < totalSection; n++) 
+    // {
+    //   allSection[n].classList.remove("back-section");
+    // }
+    
     removeBackSection();
-    for (let j = 0; j < totalNavList; j++) 
-    {
-      if (navList[j].querySelector("a").classList.contains("active"))
-      {
+    for (let j = 0; j < totalNavList; j++) {
+      if (navList[j].querySelector("a").classList.contains("active")) {
         addBackSction(j);
-        // allSection[j].classList.add("back-section");
-
+        // selNacSec.querySelector("li").classList.add("hovered");
+        
+        selNacSec.forEach((item) => {
+          item.addEventListener('click',activelink)
+      })
       }
       navList[j].querySelector("a").classList.remove("active");
+      
     }
     this.classList.add("active")
     showSection(this);
-    if (window.innerWidth < 1200)
-    {
+    
+    if (window.innerWidth < 1200) {
       asideSectionTogglerBtn();
     }
   })
 }
-navList.forEach((item) => {
-  item.addEventListener('mouseover',activelink)
-})
+// navList.forEach((item) => {
+//   item.addEventListener('mouseenter',activelink)
+// })
 // _________________________________________________________________
 
