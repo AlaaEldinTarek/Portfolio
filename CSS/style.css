@@ -55,11 +55,11 @@ ul {
   overflow-x: hidden;
   overflow-y: auto;
   transition: all 0.3s ease;
+}
+.section.open {
+  left: 250px;
+}
 
-}
-.section .aside:hover {
-  left: 270px;
-}
 .section.back-section {
   z-index: 1;
 }
@@ -244,10 +244,10 @@ ul {
   right: 0;
 }
 
-.aside .nav-toggle {
+/* .aside .nav-toggle {
   height: 40px;
   width: 45px;
-  /* border: 1px solid var(--bg-black-50); */
+  border: 1px solid var(--bg-black-50);
   cursor: pointer;
   position: fixed;
   left: 250px;
@@ -300,7 +300,7 @@ ul {
 .aside .nav-toggle.open span::after {
   transform: rotate(-45deg);
   top: 0;
-}
+} */
 
 .aside .nav {
   margin-bottom: 50px;
@@ -311,10 +311,7 @@ ul {
   margin-bottom: 20px;
   display: block;
 }
-.aside .nav li {
-  
 
-}
 .aside .nav li a {
   font-size: 20px;
   font-weight: 600;
@@ -903,32 +900,6 @@ h3.my-profession span {
   .section .container {
     padding-top: 70px;
   }
-
-  .aside {
-    left: -250px;
-  }
-
-  .aside.open {
-    left: 0;
-  }
-
-  .aside .nav-toggle {
-    display: flex;
-    left: 30px;
-  }
-
-  .aside .nav-toggle.open {
-    left: 300px;
-  }
-
-  .section {
-    left: 0;
-  }
-
-  .section.open {
-    left: 250px;
-  }
-
   .about .about-content .personal-info .info-item p span {
     display: block;
     margin-left: 0;

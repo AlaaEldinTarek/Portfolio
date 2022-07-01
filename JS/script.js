@@ -19,8 +19,10 @@ let selNacSec = document.querySelectorAll('.nav li');
 function activelink() {
   selNacSec.forEach((item) => {
     item.classList.remove('hovered');
+    
   })
   this.classList.add('hovered');
+  
 }
 
 // _________________________________________________________________
@@ -72,20 +74,32 @@ document.querySelector(".hire-me").addEventListener("click", function () {
 
 // add toggle on nav to open small media 
 
-let navTogglerBTN = document.querySelector(".nav-toggle"),
-  aside = document.querySelector(".aside");
-navTogglerBTN.addEventListener("click", () => {
+let aside = document.querySelector(".aside");
+
+aside.addEventListener("mouseenter", () => {
   asideSectionTogglerBtn();
 })
+aside.addEventListener("mouseleave", () => {
+  asideSectionTogglerBtnRe();
+})
+
+
+
 function asideSectionTogglerBtn() {
   aside.classList.toggle("open");
-  navTogglerBTN.classList.toggle("open");
-  for (let i = 0; i < totalSection; i++) {
+    for (let i = 0; i < totalSection; i++) {
     allSection[i].classList.toggle("open");
+  }
+}
+function asideSectionTogglerBtnRe() {
+  aside.classList.remove("open");
+    for (let i = 0; i < totalSection; i++) {
+    allSection[i].classList.remove("open");
   }
 }
 // _________________________________________________________________
 
+//________________________________________________________________
 
 // ########### Typing Animation ###########
 
@@ -118,7 +132,9 @@ for (let i = 0; i < totalNavList; i++) {
         // selNacSec.querySelector("li").classList.add("hovered");
         
         selNacSec.forEach((item) => {
-          item.addEventListener('click',activelink)
+          item.addEventListener('click',activelink);
+          
+
       })
       }
       navList[j].querySelector("a").classList.remove("active");
@@ -136,4 +152,6 @@ for (let i = 0; i < totalNavList; i++) {
 //   item.addEventListener('mouseenter',activelink)
 // })
 // _________________________________________________________________
+//########### section ##############
+
 
