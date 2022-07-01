@@ -209,18 +209,23 @@ function updateNavv(element) {
     }
   }
 }
+
+
+
 document.querySelector(".hire-me").addEventListener("click", function () {
   let sectionIndex = this.getAttribute("data-section-index");
   showSectionnn(this);
   updateNavv(this);
   removeBackSection();
   addBackSction(sectionIndex);
+  
+  
 })
 
 //_________________________________________________________________
 let selNacSecc = document.querySelectorAll('.nav-too li');
 function activelinkk() {
-  selNacSec.forEach((item) => {
+  selNacSecc.forEach((item) => {
     item.classList.remove('hovered');
     
   })
