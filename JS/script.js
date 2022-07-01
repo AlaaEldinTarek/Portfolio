@@ -99,7 +99,7 @@ function asideSectionTogglerBtnRe() {
 }
 // _________________________________________________________________
 
-//________________________________________________________________
+
 
 // ########### Typing Animation ###########
 
@@ -109,6 +109,8 @@ var typed = new Typed("#typing", {
   backSpeed: 60,
   loop: true
 })
+//________________________________________________________________
+
 
 // ########### Aside ###########
 let nav = document.querySelector(".nav"),
@@ -117,7 +119,8 @@ let nav = document.querySelector(".nav"),
   allSection = document.querySelectorAll(".section"),
   totalSection = allSection.length;
 
-for (let i = 0; i < totalNavList; i++) {
+for (let i = 0; i < totalNavList; i++) 
+{
   let a = navList[i].querySelector("a");
   a.addEventListener("click", function () {
     //   for (let n = 0; n < totalSection; n++) 
@@ -127,14 +130,13 @@ for (let i = 0; i < totalNavList; i++) {
     
     removeBackSection();
     for (let j = 0; j < totalNavList; j++) {
-      if (navList[j].querySelector("a").classList.contains("active")) {
+      if (navList[j].querySelector("a").classList.contains("active"))
+      {
         addBackSction(j);
         // selNacSec.querySelector("li").classList.add("hovered");
         
         selNacSec.forEach((item) => {
           item.addEventListener('click',activelink);
-          
-
       })
       }
       navList[j].querySelector("a").classList.remove("active");
@@ -143,14 +145,13 @@ for (let i = 0; i < totalNavList; i++) {
     this.classList.add("active")
     showSection(this);
     
-    if (window.innerWidth < 1200) {
+    if (window.innerWidth < 1200) 
+    {
       asideSectionTogglerBtn();
     }
   })
 }
-// navList.forEach((item) => {
-//   item.addEventListener('mouseenter',activelink)
-// })
+
 // _________________________________________________________________
 //########### side too ##############
 let navv = document.querySelector(".nav-too"),
@@ -174,21 +175,21 @@ for (let i = 0; i < totalNavListt; i++) {
         // selNacSec.querySelector("li").classList.add("hovered");
         
         selNacSecc.forEach((item) => {
-          item.addEventListener('click',activelink);
+          item.addEventListener('click',activelinkk);
       })
       }
       navListt[j].querySelector("a").classList.remove("active");
       
     }
     this.classList.add("active")
-    showSectionn(this);
+    showSectionnn(this);
   })
 }
 
 // _________________________________________________________________
 
 // Add Active to list nav by click on nav list
-function showSectionn(e) {
+function showSectionnn(e) {
   for (let i = 0; i < totalSectionn; i++) {
     allSectionn[i].classList.remove("active");
   }
@@ -210,7 +211,7 @@ function updateNavv(element) {
 }
 document.querySelector(".hire-me").addEventListener("click", function () {
   let sectionIndex = this.getAttribute("data-section-index");
-  showSectionn(this);
+  showSectionnn(this);
   updateNavv(this);
   removeBackSection();
   addBackSction(sectionIndex);
@@ -218,7 +219,7 @@ document.querySelector(".hire-me").addEventListener("click", function () {
 
 //_________________________________________________________________
 let selNacSecc = document.querySelectorAll('.nav-too li');
-function activelink() {
+function activelinkk() {
   selNacSec.forEach((item) => {
     item.classList.remove('hovered');
     

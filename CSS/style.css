@@ -21,8 +21,8 @@ body {
   line-height: 1.5;
   font-size: 16px;
   font-family: 'Poppins', sans-serif;
-  transition: 0.3s;
   text-transform: capitalize;
+  background: var(--bg-black-900);
 }
 
 * {
@@ -31,6 +31,7 @@ body {
   outline: none;
   text-decoration: none;
   box-sizing: border-box;
+  transition: 0.3s;
 }
 
 ::before,
@@ -56,7 +57,7 @@ ul {
   z-index: 0;
   overflow-x: hidden;
   overflow-y: auto;
-  transition: all 0.3s ease;
+  transition:  0.3s ;
 }
 
 .section.open {
@@ -161,8 +162,8 @@ ul {
   background: var(--skin-color);
   display: inline-block;
   border: none;
-  white-space: nowarp;
-  transition: all 0.3s ease;
+  /* white-space: nowarp; */
+  transition:  0.3s ;
 }
 
 .btn:hover {
@@ -182,7 +183,9 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.3s ease;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  transition: 0.3s;
 }
 
 .aside:hover {
@@ -196,38 +199,39 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
 
 .aside:hover .logo {
   position: absolute;
-  top: 50px;
+  top: 70px;
   font-size: 60px;
   text-transform: capitalize;
   display: flex;
   padding: 10px 20px;
   transition: 0.3s;
-  
-  
+
+
 }
+
 .aside:hover .logo a {
   display: flex;
   padding: 10px 20px;
   font-size: 50px;
 }
+
 .aside:hover .logo a span {
   display: flex;
   font-size: 50px;
 }
+
 .aside .logo {
   position: absolute;
-  top: 20px;
-  font-size: 50px;
+  top: 90px;
+  font-size: 40px;
   text-transform: capitalize;
   display: flex;
   transition: 0.3s;
-  /* writing-mode:vertical-lr; */
-  
 }
 
 .aside .logo a {
@@ -237,10 +241,10 @@ ul {
   font-weight: 300;
   padding: 20px 20px;
   font-size: 40px;
-  transition: 0.3s;
+
   position: relative;
   font-family: 'Clicker Script', cursive;
-  
+
 }
 
 .aside .logo a span {
@@ -248,7 +252,7 @@ ul {
   display: block;
   font-family: 'Clicker Script', cursive;
   font-size: 40px;
-  transition: 0.3s;
+
 }
 
 .aside .logo a::before {
@@ -276,93 +280,51 @@ ul {
 
 
 .aside .nav {
-  margin-bottom: 50px;
+  margin-bottom: 0px;
   width: 100%;
   margin-left: 5px;
+  display: inline;
+  transition: none;
 }
 
 .aside:hover .nav li {
   margin-bottom: 20px;
   display: block;
-  transition: 0.3s;
+
 }
 
-.aside .nav li a {
-  font-size: 20px;
-  font-weight: 600;
-  display: block;
-  color: var(--text-black-900);
-  padding: 5px 15px;
-  transition: 0.3s;
+.aside .nav ul {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transition: none;
 }
 
-.aside .nav li:hover,
-.aside .nav li.hovered {
-  height: 75px;
-  background: var(--bg-black-900);
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-right: 20px;
-  margin-left: 5px;
+.aside .nav ul li {
   position: relative;
-  font-size: 20px;
-  transition: 0.3s;
-}
-
-
-.aside .nav li:hover a::before,
-.aside .nav li.hovered a::before {
-  content: '';
-  position: absolute;
-  background: transparent;
-  width: 50px;
-  height: 50px;
-  top: -50px;
-  right: 0;
-  border: 25px;
-  border-radius: 50%;
-  box-shadow: 30px 30px 0px 1px var(--bg-black-900);
-  transition: 0.3s;
-
-}
-
-.aside .nav li:hover a::after,
-.aside .nav li.hovered a::after {
-  content: '';
-  position: absolute;
-  background: transparent;
-  width: 50px;
-  height: 50px;
-  bottom: -50px;
-  right: 0;
-  border: 25px;
-  border-radius: 50%;
-  box-shadow: 30px -30px 0px 1px var(--bg-black-900);
-  transition: 0.3s;
-
+  width: 100%;
+  transition: none;
 }
 
 .aside:hover .nav li a {
   font-size: 20px;
   font-weight: 600;
-  display: block;
+  display: flex;
+  justify-content: right;
   color: var(--text-black-900);
-  padding: 5px 15px;
-  margin-top: 0px;
-  margin-right: 0px;
-  transition: 0.3s;
+  padding-top: 20px;
+  padding-right: 50px;
+
+
 }
 
 .aside .nav li a {
   color: var(--bg-black-100);
-  text-align: center;
   display: block;
   font-size: 0;
   margin-top: 15px;
-  transition: 0.3s;
+  transition: none;
 
 }
 
@@ -373,19 +335,70 @@ ul {
 
 .aside .nav li a i {
   color: var(--skin-color);
-  text-align: left;
   font-size: 30px;
-  margin-bottom: 20px;
-  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  transition: none;
+
 }
 
 .aside:hover .nav li a i {
-  margin-right: 15px;
+  position: absolute;
   color: var(--skin-color);
-  font-size: px;
+  font-size: 30px;
   margin-bottom: 0px;
-  transition: 0.3s;
+  padding: 0;
+  left: 40px;
+  transition: none;
 }
+
+.aside .nav li:hover,
+.aside .nav li.hovered {
+  position: relative;
+  width: 100%;
+  height: 75px;
+  background: var(--bg-black-900);
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  padding-right: 20px;
+  margin-left: 5px;
+  font-size: 20px;
+  transition: none;
+}
+
+
+.aside .nav li:hover a::before,
+.aside .nav li.hovered a::before {
+  content: '';
+  position: absolute;
+  background: transparent;
+  width: 20px;
+  height: 20px;
+  top: -20px;
+  right: 5px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 5px 5px 0px 0px var(--bg-black-900);
+  transition: none;
+
+}
+
+.aside .nav li:hover a::after,
+.aside .nav li.hovered a::after {
+  content: '';
+  position: absolute;
+  background: transparent;
+  width: 20px;
+  height: 20px;
+  bottom: -20px;
+  right: 5px;
+  border-top-right-radius: 20px;
+  box-shadow: 5px -5px 0px 0px var(--bg-black-900);
+  transition: none;
+
+}
+
+
 
 /* Aside End */
 /* Home Start */
@@ -836,7 +849,7 @@ h3.my-profession span {
   padding: 10px 25px;
   font-size: 16px;
   color: var(--text-black-700);
-  transition: all 0.3s ease;
+  transition: all 0.3ss ease;
 }
 
 .contact .contact-form .form-item .form-control:focus {
@@ -886,7 +899,7 @@ h3.my-profession span {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 0.3s ease;
+    transition: all 0.3ss ease;
     left: 50%;
     transform: translate(-50%);
     border-radius: 50px;
