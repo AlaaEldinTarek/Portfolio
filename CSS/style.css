@@ -897,9 +897,7 @@ h3.my-profession span {
 /* contact End */
 
 @media (max-width:1199px) {
-  .section .container {
-    padding-top: 70px;
-  }
+  
   .about .about-content .personal-info .info-item p span {
     display: block;
     margin-left: 0;
