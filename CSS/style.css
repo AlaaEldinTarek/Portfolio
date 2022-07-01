@@ -202,29 +202,53 @@ ul {
 .aside:hover .logo {
   position: absolute;
   top: 50px;
-  font-size: 30px;
+  font-size: 60px;
   text-transform: capitalize;
-  display: block;
+  display: flex;
+  padding: 10px 20px;
   transition: 0.3s;
+  
+  
 }
-
+.aside:hover .logo a {
+  display: flex;
+  padding: 10px 20px;
+  font-size: 50px;
+}
+.aside:hover .logo a span {
+  display: flex;
+  font-size: 50px;
+}
 .aside .logo {
-  display: none;
+  position: absolute;
+  top: 20px;
+  font-size: 50px;
+  text-transform: capitalize;
+  display: flex;
+  transition: 0.3s;
+  /* writing-mode:vertical-lr; */
+  
 }
 
 .aside .logo a {
   color: var(--text-black-900);
-  font-weight: 700;
-  padding: 15px 20px;
-  font-size: 30px;
-  letter-spacing: 5px;
+  display: block;
+  text-align: center;
+  font-weight: 300;
+  padding: 20px 20px;
+  font-size: 40px;
+  transition: 0.3s;
   position: relative;
   font-family: 'Clicker Script', cursive;
+  
 }
 
 .aside .logo a span {
+  text-align: center;
+  display: block;
   font-family: 'Clicker Script', cursive;
   font-size: 40px;
+  transition: 0.3s;
 }
 
 .aside .logo a::before {
@@ -234,8 +258,8 @@ ul {
   height: 20px;
   border-bottom: 5px solid var(--skin-color);
   border-left: 5px solid var(--skin-color);
-  bottom: 0;
-  left: 0;
+  bottom: 0px;
+  left: 15px;
 }
 
 .aside .logo a::after {
@@ -245,9 +269,11 @@ ul {
   height: 20px;
   border-top: 5px solid var(--skin-color);
   border-right: 5px solid var(--skin-color);
-  top: 0;
-  right: 0;
+  top: 0px;
+  right: 15px;
 }
+
+
 
 .aside .nav {
   margin-bottom: 50px;
@@ -258,6 +284,7 @@ ul {
 .aside:hover .nav li {
   margin-bottom: 20px;
   display: block;
+  transition: 0.3s;
 }
 
 .aside .nav li a {
@@ -322,7 +349,6 @@ ul {
   font-size: 20px;
   font-weight: 600;
   display: block;
-  /* border-bottom: 1px solid var(--bg-black-50); */
   color: var(--text-black-900);
   padding: 5px 15px;
   margin-top: 0px;
@@ -872,7 +898,7 @@ h3.my-profession span {
     max-width: 50%;
     display: flex;
     left: 10%;
-    transform: translate(10%, 0);
+    transform: translate(20%, 0);
 
   }
 
