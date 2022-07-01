@@ -152,6 +152,77 @@ for (let i = 0; i < totalNavList; i++) {
 //   item.addEventListener('mouseenter',activelink)
 // })
 // _________________________________________________________________
-//########### section ##############
+//########### side too ##############
+let navv = document.querySelector(".nav-too"),
+  navListt = navv.querySelectorAll("li"),
+  totalNavListt = navListt.length,
+  allSectionn = document.querySelectorAll(".section"),
+  totalSectionn = allSectionn.length;
 
+for (let i = 0; i < totalNavListt; i++) {
+  let a = navListt[i].querySelector("a");
+  a.addEventListener("click", function () {
+    //   for (let n = 0; n < totalSection; n++) 
+    // {
+    //   allSection[n].classList.remove("back-section");
+    // }
+    
+    removeBackSection();
+    for (let j = 0; j < totalNavListt; j++) {
+      if (navListt[j].querySelector("a").classList.contains("active")) {
+        addBackSction(j);
+        // selNacSec.querySelector("li").classList.add("hovered");
+        
+        selNacSecc.forEach((item) => {
+          item.addEventListener('click',activelink);
+      })
+      }
+      navListt[j].querySelector("a").classList.remove("active");
+      
+    }
+    this.classList.add("active")
+    showSectionn(this);
+  })
+}
 
+// _________________________________________________________________
+
+// Add Active to list nav by click on nav list
+function showSectionn(e) {
+  for (let i = 0; i < totalSectionn; i++) {
+    allSectionn[i].classList.remove("active");
+  }
+  let target = e.getAttribute("href").split("#")[1];
+  document.querySelector("#" + target).classList.add("active")
+}
+// _________________________________________________________________
+
+// Add Active to list nav by click on button
+
+function updateNavv(element) {
+  for (let i = 0; i < totalNavListt; i++) {
+    navListt[i].querySelector("a").classList.remove("active");
+    let target = element.getAttribute("href").split("#")[1];
+    if (target === navListt[i].querySelector("a").getAttribute("href").split("#")[1]) {
+      navListt[i].querySelector("a").classList.add("active");
+    }
+  }
+}
+document.querySelector(".hire-me").addEventListener("click", function () {
+  let sectionIndex = this.getAttribute("data-section-index");
+  showSectionn(this);
+  updateNavv(this);
+  removeBackSection();
+  addBackSction(sectionIndex);
+})
+
+//_________________________________________________________________
+let selNacSecc = document.querySelectorAll('.nav-too li');
+function activelink() {
+  selNacSec.forEach((item) => {
+    item.classList.remove('hovered');
+    
+  })
+  this.classList.add('hovered');
+  
+}

@@ -21,6 +21,7 @@ body {
   line-height: 1.5;
   font-size: 16px;
   font-family: 'Poppins', sans-serif;
+  transition: 0.3s;
 }
 
 * {
@@ -56,6 +57,7 @@ ul {
   overflow-y: auto;
   transition: all 0.3s ease;
 }
+
 .section.open {
   left: 250px;
 }
@@ -204,7 +206,8 @@ ul {
   display: block;
   transition: 0.3s;
 }
-.aside .logo  {
+
+.aside .logo {
   display: none;
 }
 
@@ -307,6 +310,7 @@ ul {
   width: 100%;
   margin-left: 5px;
 }
+
 .aside:hover .nav li {
   margin-bottom: 20px;
   display: block;
@@ -319,6 +323,7 @@ ul {
   /* border-bottom: 1px solid var(--bg-black-50); */
   color: var(--text-black-900);
   padding: 5px 15px;
+  transition: 0.3s;
 }
 
 .aside .nav li:hover,
@@ -334,13 +339,12 @@ ul {
   margin-left: 5px;
   position: relative;
   font-size: 20px;
-
+  transition: 0.3s;
 }
 
 
 .aside .nav li:hover a::before,
 .aside .nav li.hovered a::before {
-
   content: '';
   position: absolute;
   background: transparent;
@@ -351,6 +355,7 @@ ul {
   border: 25px;
   border-radius: 50%;
   box-shadow: 30px 30px 0px 1px var(--bg-black-900);
+  transition: 0.3s;
 
 }
 
@@ -366,6 +371,7 @@ ul {
   border: 25px;
   border-radius: 50%;
   box-shadow: 30px -30px 0px 1px var(--bg-black-900);
+  transition: 0.3s;
 
 }
 
@@ -378,7 +384,7 @@ ul {
   padding: 5px 15px;
   margin-top: 0px;
   margin-right: 0px;
-
+  transition: 0.3s;
 }
 
 .aside .nav li a {
@@ -387,11 +393,13 @@ ul {
   display: block;
   font-size: 0;
   margin-top: 15px;
-  
+  transition: 0.3s;
+
 }
+
 .aside .nav li a.active {
   color: var(--skin-color);
-  
+
 }
 
 .aside .nav li a i {
@@ -399,12 +407,15 @@ ul {
   text-align: left;
   font-size: 30px;
   margin-bottom: 20px;
+  transition: 0.3s;
 }
+
 .aside:hover .nav li a i {
   margin-right: 15px;
   color: var(--skin-color);
   font-size: px;
   margin-bottom: 0px;
+  transition: 0.3s;
 }
 
 /* Aside End */
@@ -896,8 +907,13 @@ h3.my-profession span {
 
 /* contact End */
 
-@media (max-width:1199px) {
-  
+@media (max-width:1025px) {
+
+  .section {
+    left: 100px;
+    padding-bottom: 100px;
+  }
+
   .about .about-content .personal-info .info-item p span {
     display: block;
     margin-left: 0;
@@ -907,6 +923,70 @@ h3.my-profession span {
 }
 
 @media (max-width:991px) {
+
+  .aside {
+    display: none;
+  }
+
+  .section {
+    left: 0;
+  }
+
+  .nav-toggle {
+    width: 100%;
+    background: var(--bg-black-100);
+    position: fixed;
+    left: 0;
+    top: 93%;
+    bottom: 0;
+    z-index: 10;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+  }
+
+  .nav-too {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .nav-too li {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
+    line-height: 0.9;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: -5px;
+  }
+
+  .nav-too li:hover,
+  .nav-too li.hovered {
+    width: 40px;
+    height: 40px;
+    border-radius: 45px;
+    background: var(--bg-black-900);
+  }
+
+  .nav-too li a {
+    font-size: 0;
+    color: var(--text-black-900);
+  }
+
+  .nav-too li a i {
+    font-size: 20px;
+
+  }
+
+  .nav-too li a.active {
+    color: var(--skin-color);
+  }
 
   .contact .contact-info-item,
   .portfolio .portfolio-item,
@@ -921,11 +1001,35 @@ h3.my-profession span {
   }
 
   .home .home-img {
-    display: none;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .home .home-img img {
+    margin-top: 50px;
+    position: relative;
+    max-width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
 @media (max-width:767px) {
+
+  .home p {
+    text-align: center;
+    padding-right: 0;
+  }
+
+  .home {
+    text-align: center;
+  }
+
+  .padd-15 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 
   .contact .contact-form .col-6,
   .contact .contact-info-item,
@@ -937,6 +1041,7 @@ h3.my-profession span {
   .about .about-content .personal-info {
     flex: 0 0 100%;
     max-width: 100%;
+
   }
 
   .about .about-content .personal-info div {
