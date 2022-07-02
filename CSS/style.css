@@ -1044,6 +1044,12 @@ h3.my-profession span {
     position: absolute;
     margin-top: 50px;
   }
+  .about .about-content .skill,
+  .about .about-content .personal-info {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
 }
 
 @media (max-width:767px) {

@@ -1,15 +1,30 @@
 // ######### Toggle Style Switcher #############
-let styleSwitcherToggle = document.querySelector (".style-switcher-toggler");
-styleSwitcherToggle.addEventListener("mouseenter" , () => {
-  document.querySelector(".style-switcher").classList.toggle("open");
-})
-//  hide style switcher on scrol 
-let styleeSwitcherTogglee = document.querySelector (".style-switcher");
-document.body.addEventListener("click", () => {
-  if (document.querySelector(".style-switcher").classList.contains("open")) {
-    document.querySelector(".style-switcher").classList.remove("open")
+// let styleSwitcherToggle = document.querySelector (".style-switcher-toggler");
+// styleSwitcherToggle.addEventListener("click" , () => {
+//   document.querySelector(".style-switcher").classList.toggle("open");
+// })
+// //  hide style switcher on scrol 
+// let styleeSwitcherTogglee = document.querySelector (".style-switcher");
+// document.addEventListener("click", (e) => {
+//   if (e.target !== styleeSwitcherTogglee) {
+//     this.classList.remove("open")
+//   }
+// })
+
+let switchMeai =  document.querySelector (".style-switcher");
+
+switchMeai.onclick = function (e) {
+  switchMeai.classList.toggle("open");
+  e.stopPropagation();
+};
+document.addEventListener("click", (e) => {
+  if (e.target !== switchMeai  ) {
+    switchMeai.classList.remove("open");
   }
-})
+});
+
+
+
 // ######### Theme Colors #############
 let alternateStyle = document.querySelectorAll(".alternate-style");
 function setActiveStyle(color) {
