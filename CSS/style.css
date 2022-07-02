@@ -200,6 +200,7 @@ ul {
   justify-content: center;
   align-items: center;
   transition: 0.3s;
+  box-shadow: 0 0 20px 0 var(--skin-color);
 }
 
 .aside:hover .logo {
@@ -328,6 +329,13 @@ ul {
 
 }
 
+.aside .nav li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
+  left: 30px;
+}
 .aside .nav li a.active {
   color: var(--skin-color);
 
@@ -362,39 +370,40 @@ ul {
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
   padding-right: 20px;
-  margin-left: 5px;
   font-size: 20px;
   transition: none;
+  
 }
 
 
-.aside .nav li:hover a::before,
-.aside .nav li.hovered a::before {
+.aside .nav li:hover::before,
+.aside .nav li.hovered::before {
   content: '';
   position: absolute;
   background: transparent;
   width: 20px;
   height: 20px;
   top: -20px;
-  right: 5px;
+  right: 0px;
   border-bottom-right-radius: 20px;
-  box-shadow: 5px 5px 0px 0px var(--bg-black-900);
-  transition: none;
+  box-shadow: 5px 5px 0px 5px var(--bg-black-900);
+  
+  
 
 }
 
-.aside .nav li:hover a::after,
-.aside .nav li.hovered a::after {
+.aside .nav li:hover::after,
+.aside .nav li.hovered::after {
   content: '';
   position: absolute;
-  background: transparent;
   width: 20px;
   height: 20px;
   bottom: -20px;
-  right: 5px;
+  right: 0px;
+  background: transparent;
   border-top-right-radius: 20px;
-  box-shadow: 5px -5px 0px 0px var(--bg-black-900);
-  transition: none;
+  box-shadow: 5px -5px 0px 5px var(--bg-black-900);
+  
 
 }
 
