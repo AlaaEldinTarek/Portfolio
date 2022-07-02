@@ -57,7 +57,7 @@ ul {
   z-index: 0;
   overflow-x: hidden;
   overflow-y: auto;
-  transition:  0.3s ;
+  transition: 0.3s;
 }
 
 .section.open {
@@ -163,7 +163,7 @@ ul {
   display: inline-block;
   border: none;
   /* white-space: nowarp; */
-  transition:  0.3s ;
+  transition: 0.3s;
 }
 
 .btn:hover {
@@ -171,9 +171,12 @@ ul {
 }
 
 /* Aside Start */
+.nav-toggle {
+  display: none;
+}
 
 .aside {
-  width: 100px;
+  width: 85px;
   background: var(--bg-black-100);
   position: fixed;
   left: 0;
@@ -228,11 +231,12 @@ ul {
 
 .aside .logo {
   position: absolute;
-  top: 90px;
-  font-size: 40px;
+  top: 50px;
+  font-size: 20px;
   text-transform: capitalize;
   display: flex;
-  transition: 0.3s;
+
+
 }
 
 .aside .logo a {
@@ -241,19 +245,18 @@ ul {
   text-align: center;
   font-weight: 300;
   padding: 20px 20px;
-  font-size: 40px;
-
+  transition: 0.3s;
+  font-size: 30px;
   position: relative;
   font-family: 'Clicker Script', cursive;
-
 }
 
 .aside .logo a span {
   text-align: center;
   display: block;
   font-family: 'Clicker Script', cursive;
-  font-size: 40px;
-
+  font-size: 30px;
+  transition: 0.3s;
 }
 
 .aside .logo a::before {
@@ -336,6 +339,7 @@ ul {
   display: flex;
   left: 30px;
 }
+
 .aside .nav li a.active {
   color: var(--skin-color);
 
@@ -344,11 +348,10 @@ ul {
 .aside .nav li a i {
   color: var(--skin-color);
   font-size: 30px;
-  display: flex;
-  justify-content: center;
   padding-top: 20px;
   transition: none;
-
+  padding-right:30px;
+  
 }
 
 .aside:hover .nav li a i {
@@ -372,11 +375,12 @@ ul {
   padding-right: 20px;
   font-size: 20px;
   transition: none;
-  
+  box-shadow: 0 0 20px 0 var(--skin-color);
+
 }
 
 
-.aside .nav li:hover::before,
+/* .aside .nav li:hover::before,
 .aside .nav li.hovered::before {
   content: '';
   position: absolute;
@@ -387,8 +391,8 @@ ul {
   right: 0px;
   border-bottom-right-radius: 20px;
   box-shadow: 5px 5px 0px 5px var(--bg-black-900);
-  
-  
+
+
 
 }
 
@@ -403,9 +407,9 @@ ul {
   background: transparent;
   border-top-right-radius: 20px;
   box-shadow: 5px -5px 0px 5px var(--bg-black-900);
-  
 
-}
+
+} */
 
 
 
@@ -993,6 +997,7 @@ h3.my-profession span {
     height: 40px;
     border-radius: 45px;
     background: var(--bg-black-900);
+    box-shadow: 0 0 20px 0 var(--skin-color);
   }
 
   .nav-too li a {

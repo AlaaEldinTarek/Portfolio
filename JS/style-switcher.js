@@ -1,10 +1,11 @@
 // ######### Toggle Style Switcher #############
 let styleSwitcherToggle = document.querySelector (".style-switcher-toggler");
-styleSwitcherToggle.addEventListener("click" , () => {
+styleSwitcherToggle.addEventListener("mouseenter" , () => {
   document.querySelector(".style-switcher").classList.toggle("open");
 })
 //  hide style switcher on scrol 
-window.addEventListener("scroll", () => {
+let styleeSwitcherTogglee = document.querySelector (".style-switcher");
+document.body.addEventListener("click", () => {
   if (document.querySelector(".style-switcher").classList.contains("open")) {
     document.querySelector(".style-switcher").classList.remove("open")
   }
