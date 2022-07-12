@@ -213,8 +213,6 @@ document.querySelector(".hire-me").addEventListener("click", function () {
   updateNavv(this);
   removeBackSection();
   addBackSction(sectionIndex);
-  
-  
 })
 
 //_________________________________________________________________

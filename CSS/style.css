@@ -350,8 +350,8 @@ ul {
   font-size: 30px;
   padding-top: 20px;
   transition: none;
-  padding-right:30px;
-  
+  padding-right: 30px;
+
 }
 
 .aside:hover .nav li a i {
@@ -877,6 +877,7 @@ h3.my-profession span {
 .contact .contact-form .btn {
   height: 50px;
   padding: 0 50px;
+  cursor: pointer;
 }
 
 /* contact End */
@@ -980,6 +981,7 @@ h3.my-profession span {
     display: flex;
     justify-content: center;
     align-items: center;
+
   }
 
   .nav-too li {
@@ -1044,6 +1046,7 @@ h3.my-profession span {
     position: absolute;
     margin-top: 50px;
   }
+
   .about .about-content .skill,
   .about .about-content .personal-info {
     flex: 0 0 100%;
@@ -1061,6 +1064,10 @@ h3.my-profession span {
   .home p {
     text-align: center;
     padding-right: 0;
+  }
+
+  .home .name {
+    font-size: 80px;
   }
 
   .home {

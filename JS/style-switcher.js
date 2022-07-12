@@ -11,6 +11,9 @@
 //   }
 // })
 
+
+
+
 let switchMeai = document.querySelector(".style-switcher-toggler");
 let clickOnSwitch = document.querySelector(".style-switcher");
 
