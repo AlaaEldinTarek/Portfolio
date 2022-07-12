@@ -123,17 +123,12 @@ for (let i = 0; i < totalNavList; i++)
 {
   let a = navList[i].querySelector("a");
   a.addEventListener("click", function () {
-    //   for (let n = 0; n < totalSection; n++) 
-    // {
-    //   allSection[n].classList.remove("back-section");
-    // }
-    
+        
     removeBackSection();
     for (let j = 0; j < totalNavList; j++) {
       if (navList[j].querySelector("a").classList.contains("active"))
       {
         addBackSction(j);
-        // selNacSec.querySelector("li").classList.add("hovered");
         
         selNacSec.forEach((item) => {
           item.addEventListener('click',activelink);

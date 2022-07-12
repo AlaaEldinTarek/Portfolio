@@ -13,6 +13,7 @@
   margin:50px
 
 }
+
 .style-switcher.open {
   transform: translateX(-25%);
 }
@@ -63,6 +64,7 @@
   height: 30px;
   width: 30px;
   border-radius: 50%;
+  cursor: pointer;
   /* border: 5px solid var(--bg-black-900); */
 }
 
